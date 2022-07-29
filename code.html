@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Filza</title>
+    <title>Rewind: A Coding Project by Filza</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +27,7 @@
     <!-- ===== NAVBAR SECTION ===== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">APP NAME</a>
+        <a class="navbar-brand" href="#">Rewind</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -59,22 +59,72 @@
 
      <main class="flex-shrink-0">
         <div class="container py-5 px-5 mt-5">
-            <h2 class="border-1 border-bottom border-dark">The Code for APP NAME</h2>
+            <h2 class="border-1 border-bottom border-dark">The Code for Rewind</h2>
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                            //Call Hello World
-                            function HelloWorld() {
-                                alert('Hello World!');
-                            }
+                            <script type="prism-html-markup">
+                                //Submit using enter key.
+                                const input = document.getElementById("userString");
+                                input.addEventListener("keypress", function(e) {
+                                if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    getValue()
+                                }
+                                });
+
+
+                                //Get the string from the page
+                                //controller function
+                                function getValue() {
+                                    document.getElementById("alert").classList.add("invisible");
+                                    let userString = document.getElementById('userString').value;
+                                    let revString = reverseString(userString);
+                                    displayString(revString);
+                                }
+
+                                //Reverse the string 
+                                //logic function
+                                function reverseString (userString) {
+                                        let revString = [];
+                                    
+                                        //reverse a string using a for loop
+                                        for (let index = userString.length-1; index >= 0; index--) {
+                                        
+                                            revString += userString[index];
+                                        }
+
+                                        return revString;
+                                }
+
+
+                                //Display the reversed string to the user
+                                //View Function 
+                                function displayString(revString) {
+
+                                    //write to page
+                                    document.getElementById('msg').innerHTML = revString;
+
+                                    // `Your string reversed is: ${revString}`;
+
+                                    
+                                    //show alert box;
+                                    document.getElementById('alert').classList.remove("invisible");
+                                }
+                            </script>
                         </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structed in one function.</p>
-                    <h5>helloWorld()</h5>
+                    <h5>getValue()</h5>
+                    <p>getValue is a function that calls the other two functions an alert with a message of "Hello World"</p>
+                    <p>The Code is structed in three function.</p>
+                    <h5>reverseString()</h5>
                     <p>Hello world is a function that displays an alert with a message of "Hello World"</p>
+                    <h5>displayString()</h5>
+                    <p>Hello world is a function that displays an alert with a message of "Hello World"</p>
+                    
                 </div>
             </div>
         </div>

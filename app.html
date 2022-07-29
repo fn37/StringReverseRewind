@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Filza</title>
+    <title>Rewind: A Coding Project by Filza</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +26,7 @@
     <!-- ===== NAVBAR SECTION ===== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">APP NAME</a>
+        <a class="navbar-brand" href="#">Rewind</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -58,8 +58,36 @@
     <!-- ===== MAIN SECTION ===== -->
 
     <main class="flex-shrink-0">
-        <div class="container">
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
 
+                
+                <div class="col">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Rewind: A Coding Project</h1>
+                    <h4 class="lead mb-3">This app reverses words and sentences around. It was built with Bootstrap, Javascript, CSS and HTML</h4>
+                </div>
+                       
+                <div class="col">
+                    <h5 class="border-1 border-bottom border-danger mb-2">Enter A String To Reverse</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col">
+                            <input type="text" id="userString" class="form-control" placeholder="Can you reverse this?" aria-label="Enter A String">
+                        </div>
+                        <div class="col-12">
+                            <button id="btnSubmit" class="btn btn-danger" type="button" onclick="getValue();">Reverse Me</button>
+                        </div>
+                        <div class="alert alert-danger mt-5 invisible fade show" id="alert" role="alert">
+                            <h4 class="alert-heading">Well Done!</h4>
+                            <hr>
+                            <h6 class="alert-heading">Your string reversed is: <br></h6>
+                            <p class="mb-0" id="msg">             
+                                <!--insert message-->
+                            </p>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
         </div>
     </main>
 
